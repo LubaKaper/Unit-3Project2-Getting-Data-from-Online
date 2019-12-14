@@ -14,13 +14,13 @@ struct ShowInfo: Decodable {
 
 struct Show: Decodable {
     let name: String?
-    let image:Image
+    let image:Image?
     let rating: Rating
     let id: Int?
 }
 
 struct Image: Decodable {
-    let medium: String
+    let medium: String?
     let original: String?
 }
 

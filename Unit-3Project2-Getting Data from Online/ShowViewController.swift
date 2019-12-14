@@ -22,7 +22,14 @@ class ShowViewController: UIViewController {
             }
         }
     }
-    
+    var searchQuary = "" {
+        didSet{
+            DispatchQueue.main.async {
+                self.searchShow(searchQuary: self.searchQuary.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)
+            }
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +37,7 @@ class ShowViewController: UIViewController {
         navigationItem.title = "TV Shows"
         tableView.delegate = self
         searchBar.delegate = self
-        searchShow(searchQuary: "a")
+        searchShow(searchQuary: searchQuary)
 
     }
     
@@ -47,7 +54,15 @@ class ShowViewController: UIViewController {
         })
     }
 
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let episodeVC = segue.destination as? EpisodesViewController, let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("error")
+        }
+        
+        let episodesInfo = shows[indexPath.row]
+        episodeVC.show = episodesInfo
+    }
 }
 
 extension ShowViewController: UITableViewDataSource {
@@ -87,9 +102,17 @@ extension ShowViewController: UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        guard !searchText.isEmpty else {
-            searchShow(searchQuary: "")
-            return
-        }
+        let searchQuery = searchText.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        
+     ShowAPIClient.fetchShow(for: searchQuery, completion:  { [weak self] (result) in
+           switch result {
+           case .failure(let appError):
+               print("error: \(appError)")
+           case .success(let shows):
+               self?.shows = shows
+           }
+       })
+   }
+   
     }
-}
+

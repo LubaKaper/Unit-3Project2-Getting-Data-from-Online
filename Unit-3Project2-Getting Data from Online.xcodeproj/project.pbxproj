@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D78523523A5822700F52749 /* EpisodesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D78523423A5822700F52749 /* EpisodesAPIClient.swift */; };
+		8D78523723A5862D00F52749 /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D78523623A5862D00F52749 /* EpisodesViewController.swift */; };
+		8D78523923A5963000F52749 /* EpisodesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D78523823A5963000F52749 /* EpisodesCell.swift */; };
+		8D78523B23A5A8B100F52749 /* EpisodeDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D78523A23A5A8B100F52749 /* EpisodeDetailController.swift */; };
 		8DE6AD1823A4253200192BB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AD1723A4253200192BB8 /* AppDelegate.swift */; };
 		8DE6AD1A23A4253200192BB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AD1923A4253200192BB8 /* SceneDelegate.swift */; };
 		8DE6AD1C23A4253200192BB8 /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE6AD1B23A4253200192BB8 /* ShowViewController.swift */; };
@@ -23,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D78523423A5822700F52749 /* EpisodesAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesAPIClient.swift; sourceTree = "<group>"; };
+		8D78523623A5862D00F52749 /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
+		8D78523823A5963000F52749 /* EpisodesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesCell.swift; sourceTree = "<group>"; };
+		8D78523A23A5A8B100F52749 /* EpisodeDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailController.swift; sourceTree = "<group>"; };
 		8DE6AD1423A4253200192BB8 /* Unit-3Project2-Getting Data from Online.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit-3Project2-Getting Data from Online.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE6AD1723A4253200192BB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DE6AD1923A4253200192BB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +83,8 @@
 				8DE6AD1923A4253200192BB8 /* SceneDelegate.swift */,
 				8DE6AD1B23A4253200192BB8 /* ShowViewController.swift */,
 				8DE6AD1D23A4253200192BB8 /* Main.storyboard */,
+				8D78523623A5862D00F52749 /* EpisodesViewController.swift */,
+				8D78523A23A5A8B100F52749 /* EpisodeDetailController.swift */,
 				8DE6AD2023A4253500192BB8 /* Assets.xcassets */,
 				8DE6AD2223A4253500192BB8 /* LaunchScreen.storyboard */,
 				8DE6AD2523A4253500192BB8 /* Info.plist */,
@@ -88,10 +98,12 @@
 				8DE6AD2C23A425A100192BB8 /* NetworkHelper.swift */,
 				8DE6AD2E23A425BD00192BB8 /* AppError.swift */,
 				8DE6AD3223A425EE00192BB8 /* ShowAPIClient.swift */,
+				8D78523423A5822700F52749 /* EpisodesAPIClient.swift */,
 				8DE6AD3023A425D500192BB8 /* ShowsModel.swift */,
 				8DE6AD3423A42F7600192BB8 /* EpisodesModel.swift */,
 				8DE6AD3623A5273A00192BB8 /* UIImage+Extension.swift */,
 				8DE6AD3823A527B900192BB8 /* ShowCell.swift */,
+				8D78523823A5963000F52749 /* EpisodesCell.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -167,11 +179,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D78523523A5822700F52749 /* EpisodesAPIClient.swift in Sources */,
 				8DE6AD2D23A425A100192BB8 /* NetworkHelper.swift in Sources */,
+				8D78523923A5963000F52749 /* EpisodesCell.swift in Sources */,
 				8DE6AD1C23A4253200192BB8 /* ShowViewController.swift in Sources */,
+				8D78523B23A5A8B100F52749 /* EpisodeDetailController.swift in Sources */,
 				8DE6AD3123A425D500192BB8 /* ShowsModel.swift in Sources */,
 				8DE6AD3723A5273A00192BB8 /* UIImage+Extension.swift in Sources */,
 				8DE6AD3523A42F7600192BB8 /* EpisodesModel.swift in Sources */,
+				8D78523723A5862D00F52749 /* EpisodesViewController.swift in Sources */,
 				8DE6AD3323A425EE00192BB8 /* ShowAPIClient.swift in Sources */,
 				8DE6AD3923A527B900192BB8 /* ShowCell.swift in Sources */,
 				8DE6AD2F23A425BD00192BB8 /* AppError.swift in Sources */,

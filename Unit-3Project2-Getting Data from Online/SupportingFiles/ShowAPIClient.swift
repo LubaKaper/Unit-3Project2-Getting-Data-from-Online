@@ -30,7 +30,7 @@ struct ShowAPIClient {
                     // usingsearchResults to create array of shows
                     // capturing array of shows on completion handler
                     completion(.success(searchResults.map({$0.show})))
-                
+                 
                 } catch {
                     completion(.failure(.decodingError(error)))
                 }

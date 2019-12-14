@@ -24,7 +24,7 @@ class ShowCell: UITableViewCell {
         nameLabel.text = show.name
         ratingLabel.text = "RATING: \(show.rating.average?.description ?? "")"
         
-        showImage.getImage(with: show.image.original ?? "") { [weak self] (result) in
+        showImage.getImage(with: show.image?.original ?? "") { [weak self] (result) in
             switch result {
             case .failure:
                 DispatchQueue.main.async {
@@ -36,6 +36,11 @@ class ShowCell: UITableViewCell {
                 }
             }
         }
+    }
+    override func prepareForReuse() {
+        super .prepareForReuse()
+        // empty out image view
+        showImage.image = nil
     }
 
 }

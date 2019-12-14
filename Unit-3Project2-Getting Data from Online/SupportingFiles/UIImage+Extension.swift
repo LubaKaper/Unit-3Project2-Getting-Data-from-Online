@@ -17,7 +17,7 @@ extension UIImageView {
     
     
     // this part changes http to https
-    let urlString = "https" + urlString.dropFirst(4)
+   // let urlString = "https" + urlString.dropFirst(4)
     // The UIActivityIndicatorView is used to indicate to the user that a download is in progress
     let activityIndicator = UIActivityIndicatorView(style: .large)
     activityIndicator.color = .orange

@@ -8,13 +8,15 @@
 
 import Foundation
 struct EpisodeInfo: Decodable {
-    let name: String
-    let season: Int
-    let episode: Int
-    let image: [EpisodeImage]
+    let name: String?
+    let season: Int?
+    let number: Int?
+    let image: EpisodeImage?
 }
 
 struct EpisodeImage: Decodable {
     let medium: String
     let original: String
 }
+
+
