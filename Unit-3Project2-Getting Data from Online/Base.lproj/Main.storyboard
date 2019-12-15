@@ -144,6 +144,7 @@
                                             <outlet property="episodeImage" destination="sFp-Yu-uBb" id="8c3-aQ-dsB"/>
                                             <outlet property="nameLabel" destination="cKZ-BQ-gW3" id="ceN-pv-XK8"/>
                                             <outlet property="seasonEpisodeLabel" destination="Rdr-KK-ZBy" id="10B-xv-OZf"/>
+                                            <segue destination="GKG-1Q-lqw" kind="show" id="rFE-so-d1e"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -166,6 +167,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MTp-oD-fZU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1750.7246376811595" y="121.875"/>
+        </scene>
+        <!--Episode Detail Controller-->
+        <scene sceneID="w4x-QG-aB6">
+            <objects>
+                <viewController id="GKG-1Q-lqw" customClass="EpisodeDetailController" customModule="Unit_3Project2_Getting_Data_from_Online" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="buM-uK-qqD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pmn-eb-xYN">
+                                <rect key="frame" x="0.0" y="88" width="414" height="243"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mu1-fE-cSx">
+                                <rect key="frame" x="20" y="371" width="374" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="season/episode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQj-fB-3aA">
+                                <rect key="frame" x="20" y="432" width="374" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TOj-3E-RmK">
+                                <rect key="frame" x="20" y="493" width="374" height="361"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sm7-3W-sA8" firstAttribute="bottom" secondItem="TOj-3E-RmK" secondAttribute="bottom" constant="8" id="DUy-Yz-dyz"/>
+                            <constraint firstItem="sm7-3W-sA8" firstAttribute="trailing" secondItem="mu1-fE-cSx" secondAttribute="trailing" constant="20" id="Mcc-dG-tzG"/>
+                            <constraint firstItem="NQj-fB-3aA" firstAttribute="leading" secondItem="sm7-3W-sA8" secondAttribute="leading" constant="20" id="ON2-ed-7gp"/>
+                            <constraint firstItem="mu1-fE-cSx" firstAttribute="top" secondItem="Pmn-eb-xYN" secondAttribute="bottom" constant="40" id="V1D-Q8-FV8"/>
+                            <constraint firstItem="mu1-fE-cSx" firstAttribute="leading" secondItem="sm7-3W-sA8" secondAttribute="leading" constant="20" id="ZCi-1L-NF1"/>
+                            <constraint firstItem="Pmn-eb-xYN" firstAttribute="top" secondItem="sm7-3W-sA8" secondAttribute="top" id="Zdy-A0-5qy"/>
+                            <constraint firstItem="Pmn-eb-xYN" firstAttribute="leading" secondItem="sm7-3W-sA8" secondAttribute="leading" id="ZlY-Y5-WNL"/>
+                            <constraint firstItem="sm7-3W-sA8" firstAttribute="trailing" secondItem="NQj-fB-3aA" secondAttribute="trailing" constant="20" id="cnd-CV-IJO"/>
+                            <constraint firstItem="sm7-3W-sA8" firstAttribute="trailing" secondItem="TOj-3E-RmK" secondAttribute="trailing" constant="20" id="dee-Yx-9iQ"/>
+                            <constraint firstItem="Pmn-eb-xYN" firstAttribute="trailing" secondItem="sm7-3W-sA8" secondAttribute="trailing" id="ktG-Mv-7Sm"/>
+                            <constraint firstItem="Pmn-eb-xYN" firstAttribute="height" secondItem="buM-uK-qqD" secondAttribute="height" multiplier="0.271205" id="luI-vL-wDh"/>
+                            <constraint firstItem="TOj-3E-RmK" firstAttribute="top" secondItem="NQj-fB-3aA" secondAttribute="bottom" constant="40" id="rRs-Yr-RBF"/>
+                            <constraint firstItem="NQj-fB-3aA" firstAttribute="top" secondItem="mu1-fE-cSx" secondAttribute="bottom" constant="40" id="ux1-MZ-fSD"/>
+                            <constraint firstItem="TOj-3E-RmK" firstAttribute="leading" secondItem="sm7-3W-sA8" secondAttribute="leading" constant="20" id="yu0-Fk-lDY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sm7-3W-sA8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jca-FD-AXB"/>
+                    <connections>
+                        <outlet property="episodeImage" destination="Pmn-eb-xYN" id="cPi-WW-BMX"/>
+                        <outlet property="nameLabel" destination="mu1-fE-cSx" id="pN8-ab-coJ"/>
+                        <outlet property="seasonEpisodeLabel" destination="NQj-fB-3aA" id="cNw-Ez-jKb"/>
+                        <outlet property="textView" destination="TOj-3E-RmK" id="Gui-St-lTK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="myg-DQ-QTt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2598.5507246376815" y="121.875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mCk-zA-6xl">
